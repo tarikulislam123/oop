@@ -1,0 +1,98 @@
+#include <iostream>
+using namespace std;
+
+class car{
+    int speed;
+    int gear;
+public:
+    void setSpeed(int x)
+    {
+        speed = x;
+    }
+    void setGear(int x)
+    {
+        gear = x;
+    }
+    int getSpeed()
+    {
+        return speed;
+    }
+    int getGear()
+    {
+        return gear;
+    }
+};
+int main()
+{
+    car bmw, pajero;
+   
+    bmw.setSpeed(10);
+    bmw.setGear(20);
+    
+    pajero.setSpeed(15);
+    pajero.setGear(10);
+
+_______________________________________________________________________________________________________________________________
+//'moderateCar' class ta inherit kortase 'car' class k
+
+#include<iostream>>
+using namespace std;
+
+class car{
+    int speed;
+    int gear;
+public:
+    void setSpeed(int x)
+    {
+        speed = x;
+    }
+    void setGear(int x)
+    {
+        gear = x;
+    }
+    int getSpeed()
+    {
+        return speed;
+    }
+    int getGear()
+    {
+        return gear;
+    }
+};
+
+class moderateCar:public car
+{
+    int cost;
+
+ public:
+      void setCost(int x)
+      {
+          cost = x;
+      }
+      int getCost()
+      {
+          return cost;
+      }
+
+};
+
+int main()
+{
+  moderateCar toyota;
+  toyota.setSpeed(10);
+  toyota.setGear(20);
+  toyota.setCost(25);
+
+  cout<<"Speed of toyota: "<<toyota.getSpeed()<<endl;
+  cout<<"Gear of toyota: "<<toyota.getGear()<<endl;
+  cout<<"Expenditure of toyota: "<<toyota.getCost()<<" Lacs"<<endl;
+
+
+}
+
+
+    cout<<"Speed of bmw: "<<bmw.getSpeed()<<endl;
+    cout<<"Speed of pajero: "<<pajero.getSpeed()<<endl;
+    cout<<"Gear of bmw: "<<bmw.getGear()<<endl;
+    cout<<"Gear of pajero: "<<pajero.getGear()<<endl;
+}

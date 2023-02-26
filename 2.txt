@@ -1,0 +1,144 @@
+#include <iostream>
+using namespace std;
+class car{
+    string name;
+    int speed;
+    int gear;
+public:
+    car(string name,int speed,int gear)
+    {
+        this->name = name;
+        this->speed = speed;
+        this->gear = gear;
+    }
+    void getValue()
+    {
+        cout<<"Vehicle name: "<<name<<endl;
+        cout<<"Speed: "<<speed<<endl;
+        cout<<"Gear: "<<gear;
+
+    }
+
+};
+int main()
+{
+    car *bmw = new car("BMW",200,6);
+    car *pajero = new car("Pajero",180,5);
+
+    bmw->getValue();
+    pajero->getValue();
+
+    delete bmw;
+    car *bmw = new car("BMW",200,6);
+
+}
+
+
+________________________________________________________________________________________________________________________________
+#include <iostream>
+using namespace std;
+class car
+{
+    string name;
+    int speed;
+    int gear;
+public:
+    car(string name, int speed, int gear)
+    {
+        this->name = name;
+        this->speed = speed;
+        this->gear = gear;
+    }
+
+    car(string name, int speed);
+
+    void getValue()
+    {
+        cout<<"Car Name: "<<name<<endl;
+        cout<<"Speed: "<<speed<<endl;
+        cout<<"Gear: "<<gear<<endl;
+    }
+
+    void updateGear(int x)
+    {
+          this->gear = gear + x;
+    }
+
+
+
+};
+
+int main()
+{
+    car *bmw = new car("BMW", 20, 3);
+    car *pajero = new car("Pajero", 15, 10);
+
+    bmw->updateGear(5);
+
+    bmw->getValue();
+
+
+
+}
+
+________________________________________________________________________________________________________________________________
+#include <iostream>
+using namespace std;
+class car
+{
+    string name;
+    int speed;
+    int gear;
+public:
+    car(string name, int speed, int gear)
+    {
+        this->name = name;
+        this->speed = speed;
+        this->gear = gear;
+    }
+
+    car(string name, int speed);
+
+    void getValue()
+    {
+        cout<<"Car Name: "<<name<<endl;
+        cout<<"Speed: "<<speed<<endl;
+        cout<<"Gear: "<<gear<<endl;
+    }
+
+    void updateGear(int x); // Inside the class declaration = void nameOfTheFunction(Parameter)
+
+};
+
+
+void car :: updateGear(int x) // Outside the class definition = void className :: nameOfTheFunction(Parameter)
+{
+    this->gear = gear + x;
+}
+car::car(string name, int speed)
+{
+    this->name = name;
+    this->speed = speed;
+    this->gear = 0;
+}
+
+
+
+int main()
+{
+    car *bmw = new car("BMW", 20, 15);
+    car *pajero = new car("Pajero", 15, 10);
+    car *ford = new car("Ford",18);
+
+    bmw->updateGear(5);
+
+    bmw->getValue();
+    pajero->getValue();
+    ford->getValue();
+
+    delete bmw;
+    delete pajero;
+    delete ford;
+
+}
+
