@@ -50,7 +50,7 @@ public:
         this->gear = gear;
     }
 
-  //  car(string name, int speed);
+    
 
     void getValue()
     {
@@ -106,12 +106,12 @@ public:
         cout<<"Gear: "<<gear<<endl;
     }
 
-void updateGear(int x); // Inside the class declaration = void nameOfTheFunction(Parameter)
+void updateGear(int x); 
 
 };
 
 
-void car :: updateGear(int x) // Outside the class definition = void className :: nameOfTheFunction(Parameter)
+void car :: updateGear(int x)
 {
     this->gear = gear + x;
 }
