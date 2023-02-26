@@ -1,0 +1,104 @@
+// class er moddhe 'declartion'  ||  class er baire 'definition' 
+#include <iostream>
+using namespace std;
+class car
+{
+    string name;
+    int speed;
+
+public:
+
+   car(string name, int speed); //constructor declaration
+
+    void getValue()
+    {
+        cout<<"Car Name: "<<name<<endl;
+        cout<<"Speed: "<<speed<<endl;
+
+    }
+
+};
+
+ car::car(string name, int speed) // constructor definition
+{
+    this->name = name;
+    this->speed = speed;
+
+}
+
+int main()
+{
+
+
+    car *ford = new car("Ford",18);
+
+    ford->getValue();
+
+    delete ford;
+
+}
+
+
+______________________________________________________________________________________________
+#include <iostream>
+using namespace std;
+class car
+{
+    string name;
+    int speed;
+    int gear;
+public:
+    car(string name, int speed, int gear)
+    {
+        this->name = name;
+        this->speed = speed;
+        this->gear = gear;
+    }
+
+    car(string name, int speed); //constructor declaration
+
+    void getValue()
+    {
+        cout<<"Car Name: "<<name<<endl;
+        cout<<"Speed: "<<speed<<endl;
+        cout<<"Gear: "<<gear<<endl;
+    }
+
+ void updateGear(int x); //declaration
+
+};
+
+
+void car :: updateGear(int x) //definition
+{
+    this->gear = gear + x;
+}
+
+ car::car(string name, int speed) // constructor definition
+{
+    this->name = name;
+    this->speed = speed;
+    this->gear = 0;
+}
+
+
+
+int main()
+{
+    car *bmw = new car("BMW", 20, 15);
+
+    car *ford = new car("Ford",18);
+
+    bmw->updateGear(5);
+
+    bmw->getValue();
+
+    ford->getValue();
+
+    delete bmw;
+
+    delete ford;
+
+}
+
+
