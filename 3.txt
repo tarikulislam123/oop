@@ -1,0 +1,73 @@
+#include<iostream>>
+using namespace std;
+
+class car{
+    int speed;
+    int gear;
+public:
+    void setSpeed(int x)
+    {
+        speed = x;
+    }
+    void setGear(int x)
+    {
+        gear = x;
+    }
+    int getSpeed()
+    {
+        return speed;
+    }
+    int getGear()
+    {
+        return gear;
+    }
+};
+
+class moderateCar:public car
+{
+    int cost;
+
+ public:
+      void setCost(int x)
+      {
+          cost = x;
+      }
+       getCost()
+      {
+          return cost;
+      }
+
+};
+
+
+class cheapCar:public moderateCar
+{
+
+};
+
+
+int main()
+{
+  moderateCar toyota;
+  toyota.setSpeed(100);
+  toyota.setGear(5);
+  toyota.setCost(25);
+
+  cheapCar corolla;
+  corolla.setSpeed(150);
+  corolla.setGear(6);
+  corolla.setCost(10);
+
+
+
+  cout<<"Speed of toyota: "<<toyota.getSpeed()<<endl;
+  cout<<"Gear of toyota: "<<toyota.getGear()<<endl;
+  cout<<"Expenditure of toyota: "<<toyota.getCost()<<" Lacs"<<endl<<endl;
+
+
+  cout<<"Speed of corolla: "<<corolla.getSpeed()<<endl;
+  cout<<"Gear of corolla: "<<corolla.getGear()<<endl;
+  cout<<"Expenditure of corolla: "<<corolla.getCost()<<" Lacs"<<endl;
+
+
+}
