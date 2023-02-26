@@ -82,6 +82,7 @@ int main()
 }
 
 _______________________________________________________________________________________________________________________________
+// class er moddhe 'declartion'  ||  class er baire 'definition' 
 #include <iostream>
 using namespace std;
 class car
@@ -128,18 +129,16 @@ void car :: updateGear(int x) //definition
 int main()
 {
     car *bmw = new car("BMW", 20, 15);
-
     car *ford = new car("Ford",18);
 
     bmw->updateGear(5);
 
     bmw->getValue();
-
     ford->getValue();
 
     delete bmw;
-
     delete ford;
 
 }
+
 
