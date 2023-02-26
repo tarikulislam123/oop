@@ -97,7 +97,7 @@ public:
         this->gear = gear;
     }
 
-    car(string name, int speed);
+    car(string name, int speed); //declaration
 
     void getValue()
     {
@@ -106,16 +106,17 @@ public:
         cout<<"Gear: "<<gear<<endl;
     }
 
-void updateGear(int x); 
+ void updateGear(int x); //declaration
 
 };
 
 
-void car :: updateGear(int x)
+void car :: updateGear(int x) //definition
 {
     this->gear = gear + x;
 }
-car::car(string name, int speed)
+
+ car::car(string name, int speed) //definition
 {
     this->name = name;
     this->speed = speed;
@@ -127,17 +128,17 @@ car::car(string name, int speed)
 int main()
 {
     car *bmw = new car("BMW", 20, 15);
-    car *pajero = new car("Pajero", 15, 10);
+
     car *ford = new car("Ford",18);
 
     bmw->updateGear(5);
 
     bmw->getValue();
-    pajero->getValue();
+
     ford->getValue();
 
     delete bmw;
-    delete pajero;
+
     delete ford;
 
 }
