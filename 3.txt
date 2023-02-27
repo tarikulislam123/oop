@@ -74,7 +74,6 @@ int main()
 _______________________________________________________________________________________________________________________________
 #include<iostream>>
 using namespace std;
-
 class car{
     int speed;
     int gear;
@@ -131,31 +130,19 @@ class cheapCar:public moderateCar
 
 int main()
 {
-  moderateCar toyota;
-  toyota.setSpeed(10);
-  toyota.setGear(20);
-  toyota.setCost(25);
+
 
   cheapCar corolla;
-  corolla.setSpeed(2);
-  corolla.setGear(1);
-  corolla.setCost(10);
-  corolla.setService(4);
-
-
-
-  cout<<"Speed of toyota: "<<toyota.getSpeed()<<endl;
-  cout<<"Gear of toyota: "<<toyota.getGear()<<endl;
-  cout<<"Expenditure of toyota: "<<toyota.getCost()<<" Lacs"<<endl<<endl;
+  corolla.setSpeed(250);
+  corolla.setGear(5);
+  corolla.setCost(20);
+  corolla.setService(5);
 
 
   cout<<"Speed of corolla: "<<corolla.getSpeed()<<endl;
   cout<<"Gear of corolla: "<<corolla.getGear()<<endl;
   cout<<"Expenditure of corolla: "<<corolla.getCost()<<" Lacs"<<endl;
- cout<<"Service of corolla: "<<corolla.getService()<<" years"<<endl;
+  cout<<"Service of corolla: "<<corolla.getService()<<" years"<<endl;
 
 
 }
-
-
-
