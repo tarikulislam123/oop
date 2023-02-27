@@ -1,6 +1,8 @@
 Constructor diye (setter) kore,  (getter) nah || (getter) er jonno getValue() banai nite hoy
 
 Constructor diye value set korsi
+
+Constructor er kono return type nai || Constructor er naam r class er naam same hoy
 _______________________________________________________________________________________________________________________________
 #include <iostream>
 using namespace std;
