@@ -1,4 +1,4 @@
-#include <iostream>
+#include<iostream>>
 using namespace std;
 
 class car{
@@ -22,15 +22,18 @@ public:
         return gear;
     }
 };
+
 int main()
 {
-    car bmw, pajero;
-   
-    bmw.setSpeed(10);
-    bmw.setGear(20);
-    
-    pajero.setSpeed(15);
-    pajero.setGear(10);
+  car toyota;
+
+  toyota.setSpeed(100);
+  toyota.setGear(5);
+
+  cout<<"Speed of toyota: "<<toyota.getSpeed()<<endl;
+  cout<<"Gear of toyota: "<<toyota.getGear()<<endl;
+
+}
 
 _______________________________________________________________________________________________________________________________
 //'moderateCar' class ta inherit kortase 'car' class k
