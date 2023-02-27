@@ -1,3 +1,7 @@
+Constructor diye (setter) kore,  (getter) nah || (getter) er jonno getValue() banai nite hoy
+
+Constructor diye value set korsi
+_______________________________________________________________________________________________________________________________
 #include <iostream>
 using namespace std;
 class car{
