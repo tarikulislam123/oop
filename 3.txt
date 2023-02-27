@@ -127,9 +127,7 @@ class cheapCar:public moderateCar
            return service;
        }
 };
-//class cheapCar:public moderateCar{
-//};
-//
+
 
 int main()
 {
