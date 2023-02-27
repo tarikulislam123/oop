@@ -88,7 +88,7 @@ int main()
 
   cout<<"Speed of toyota: "<<toyota.getSpeed()<<endl;
   cout<<"Gear of toyota: "<<toyota.getGear()<<endl;
-  cout<<"Expenditure of toyota: "<<toyota.getCost()<<" Lacs"<<endl;
+  cout<<"Expenditure of toyota: "<<toyota.getCost()<<" Lacs"<<endl<<endl;
 
 
 }
