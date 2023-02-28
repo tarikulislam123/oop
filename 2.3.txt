@@ -1,0 +1,63 @@
+#include<iostream>>
+using namespace std;
+class car{
+    string name;
+    int speed;
+    int gear;
+public:
+
+    car(string name,int speed,int gear)
+    {
+     this->name = name;
+     this->speed = speed;
+     this->gear = gear;
+    }
+
+    car(string name,int speed);   //Another Constructor Declaration
+
+
+    void getValue()
+    {
+        cout<<"Car Name: "<<name<<endl;
+        cout<<"Speed: "<<speed<<endl;
+        cout<<"Gear: "<<gear<<endl<<endl;
+
+    }
+
+    void updateSpeed(int x);//DECLARATION
+
+};
+
+car::car(string name,int speed)
+{
+    this->name = name;
+    this->speed = speed;
+}
+
+void car::updateSpeed(int x) //DEFINITION
+{
+     this->speed = speed + x;
+
+}
+
+
+
+
+int main()
+{
+    car *bmw = new car("BMW",350,6);
+    car *pajero = new car("Pajero",180,5);
+
+    car *toyota = new car("Toyota",250);
+
+    pajero->updateSpeed(120);
+
+    bmw->getValue();
+    pajero->getValue();
+    toyota->getValue();
+
+
+
+
+
+}
