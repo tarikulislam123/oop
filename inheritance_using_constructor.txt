@@ -1,0 +1,81 @@
+#include <iostream>
+using namespace std;
+
+class car{
+    int speed;
+    int gear;
+public:
+    void setSpeed(int x)
+    {
+        speed = x;
+    }
+    void setGear(int x)
+    {
+        gear = x;
+    }
+    int getSpeed()
+    {
+        return speed;
+    }
+    int getGear()
+    {
+        return gear;
+    }
+};
+
+class moderateCar : public car{
+    int cost;
+public:
+    void setCost(int x)
+    {
+        cost = x;
+    }
+    int getCost()
+    {
+        return cost;
+    }
+};
+
+
+
+class cheapCar : public moderateCar{
+    int service;
+public:
+    void setService(int x)
+    {
+        service = x;
+    }
+    int getService()
+    {
+        return service;
+    }
+};
+
+class expensiveCar : public moderateCar{
+};
+
+
+int main()
+{
+
+    moderateCar toyota;
+    toyota.setSpeed(6);
+    toyota.setGear(9);
+    toyota.setCost(20);
+
+    cheapCar corolla;
+    corolla.setSpeed(2);
+    corolla.setGear(1);
+    corolla.setCost(10);
+    corolla.setService(4);
+
+
+    cout<<"Speed of toyota: "<<toyota.getSpeed()<<endl;
+    cout<<"Gear of toyota: "<<toyota.getGear()<<endl;
+    cout<<"Cost of toyota: "<<toyota.getCost()<<" Lacs"<<endl<<endl;
+
+    cout<<"Speed of corolla: "<<corolla.getSpeed()<<endl;
+    cout<<"Gear of corolla: "<<corolla.getGear()<<endl;
+    cout<<"Cost of corolla: "<<corolla.getCost()<<" Lacs"<<endl;
+    cout<<"Service of corolla: "<<corolla.getService()<<" years"<<endl;
+}
