@@ -5,13 +5,10 @@ class car{
     int speed;
     int gear;
 public:
-    void setSpeed(int x)
+    car(int x, int y)
     {
         speed = x;
-    }
-    void setGear(int x)
-    {
-        gear = x;
+        gear = y;
     }
     int getSpeed()
     {
@@ -23,12 +20,14 @@ public:
     }
 };
 
-class moderateCar : public car{
+class moderateCar : public car
+{
     int cost;
+
 public:
-    void setCost(int x)
+    moderateCar(int x,int y,int z):car(x,y)
     {
-        cost = x;
+        cost = z;
     }
     int getCost()
     {
@@ -36,46 +35,16 @@ public:
     }
 };
 
-
-
-class cheapCar : public moderateCar{
-    int service;
-public:
-    void setService(int x)
-    {
-        service = x;
-    }
-    int getService()
-    {
-        return service;
-    }
-};
-
-class expensiveCar : public moderateCar{
-};
-
-
 int main()
 {
 
-    moderateCar toyota;
-    toyota.setSpeed(6);
-    toyota.setGear(9);
-    toyota.setCost(20);
-
-    cheapCar corolla;
-    corolla.setSpeed(2);
-    corolla.setGear(1);
-    corolla.setCost(10);
-    corolla.setService(4);
-
+    moderateCar toyota(200,5,20);
 
     cout<<"Speed of toyota: "<<toyota.getSpeed()<<endl;
     cout<<"Gear of toyota: "<<toyota.getGear()<<endl;
-    cout<<"Cost of toyota: "<<toyota.getCost()<<" Lacs"<<endl<<endl;
+    cout<<"Cost of toyota: "<<toyota.getCost()<<" Lacs"<<endl;
 
-    cout<<"Speed of corolla: "<<corolla.getSpeed()<<endl;
-    cout<<"Gear of corolla: "<<corolla.getGear()<<endl;
-    cout<<"Cost of corolla: "<<corolla.getCost()<<" Lacs"<<endl;
-    cout<<"Service of corolla: "<<corolla.getService()<<" years"<<endl;
+
 }
+
+
