@@ -46,5 +46,80 @@ int main()
 
 
 }
+_______________________________________________________________________________________________________________________________
+#include <iostream>
+
+using namespace std;
+
+class car{
+    int speed;
+    int gear;
+public:
+    car(int x, int y)
+    {
+        speed = x;
+        gear = y;
+    }
+    int getSpeed()
+    {
+        return speed;
+    }
+    int getGear()
+    {
+        return gear;
+    }
+};
+
+class moderateCar : public car
+{
+    int cost;
+
+public:
+    moderateCar(int x,int y,int z):car(x,y)
+    {
+        cost = z;
+    }
+    int getCost()
+    {
+        return cost;
+    }
+};
+
+
+
+class cheapCar : public moderateCar{
+    int service;
+public:
+    cheapCar(int x,int y,int z, int w):moderateCar(x,y,z)
+    {
+        service = w;
+    }
+    int getService()
+    {
+        return service;
+    }
+};
+
+
+
+int main()
+{
+
+    moderateCar toyota(200,5,20);
+
+    cheapCar corolla(350,5,8,5);
+
+
+    cout<<"Speed of toyota: "<<toyota.getSpeed()<<endl;
+    cout<<"Gear of toyota: "<<toyota.getGear()<<endl;
+    cout<<"Cost of toyota: "<<toyota.getCost()<<" Lacs"<<endl<<endl;
+
+    cout<<"Speed of corolla: "<<corolla.getSpeed()<<endl;
+    cout<<"Gear of corolla: "<<corolla.getGear()<<endl;
+    cout<<"Cost of corolla: "<<corolla.getCost()<<" Lacs"<<endl;
+    cout<<"Service of corolla: "<<corolla.getService()<<" years"<<endl;
+
+}
+
 
 
