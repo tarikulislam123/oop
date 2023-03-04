@@ -38,7 +38,7 @@ public:
 int main()
 {
 
-    moderateCar toyota(200,5,20);
+    moderateCar toyota(200,5,20);// moderateCar toyota = moderateCar(200,5,20);
 
     cout<<"Speed of toyota: "<<toyota.getSpeed()<<endl;
     cout<<"Gear of toyota: "<<toyota.getGear()<<endl;
