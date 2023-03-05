@@ -1,0 +1,17 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int a = 20;
+
+    int *k; // Pointer declare korsi
+
+    k = &a; // k er moddhe 'a' er address diya disi || K point kore ase 'a' er address k
+
+    cout<< *k; // (*k) jake point kore ase tar value print korbe
+
+    delete k;
+
+}
