@@ -1,3 +1,4 @@
+*Polymorphism : different class e same naam er function thankbe 
 #include <iostream>
 using namespace std;
 
@@ -30,7 +31,7 @@ int main()
 
 
 }
-__________________________________________________________________________
+_______________________________________________________________________________________________________________________________
 #include <iostream>
 using namespace std;
 
@@ -46,12 +47,15 @@ class Rabbit: public Animal
 };
 
 int main(void) {
-     Animal r = Rabbit();
-    cout<<r.color;
+     Animal r = Rabbit(); // 'Animal' class er object diye 'Rabbit' class k point/call kortasi || But function call er somoy se always
+                              always Base class k call kortase
+     cout<<r.color;
 
 }
-
-__________________________________________________________________________
+_______________________________________________________________________________________________________________________________
+(1) Amra Polygon class er (*P) diye,er theke jara derived hoise tadeke acces korbo
+Like-> Polygon class er (*P) diye,Hexagon/Pentagon k access korbo || Just p er moddhe tar address niya nisi
+_____________________________________________________________________________________________________________________________
 *run time poliymorphism:
 
 #include <iostream>
@@ -93,7 +97,7 @@ int main()
   
 }
 
-__________________________________________________________________________
+_______________________________________________________________________________________________________________________________
 #include <iostream>
 using namespace std;
 
@@ -150,6 +154,9 @@ int main(void)
 
 
 }
+
+
+Deep Inheritance baki ase->abstract[anroid]
 
 
 
